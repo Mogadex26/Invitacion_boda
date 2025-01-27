@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Waterfall&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="invitacion">
+        <header>
+            <p class="versiculo">Ponme como un sello sobre tu corazón, como una marca sobre tu brazo;<br>
+            porque fuerte como la muerte es el amor.<br> (Cantares 8:6a)</p>
+        </header>
+        
+        <h2>¡Nos casamos!</h2>
+        <h1 class="nombres">
+            <span class="nombre nombre-arriba">Laury</span>
+            <span class="ampersand">&</span>
+            <span class="nombre nombre-abajo">Nelson</span>
+        </h1>
+        <p class="mensaje">Tenemos el honor de invitarlos a celebrar nuestra boda</p>
+        <p class="fecha">
+            <span class="mes">junio</span>
+            <span class="dia">
+                <span class="dia-semana">Sabado</span>
+                28
+            </span>
+            <span class="año">2025</span>
+        </p>
+        
+        <div class="detalles">
+            <p>Iglesia:<br>
+            5:00 pm</p>
+            <p>Salón de eventos:<br>
+            8:00 pm</p>
+        </div>
+            
+        <table border="0">
+            <!-- Fila 1: Encabezado -->
+            <tr>
+                <th></th>
+                <th><strong>Etiqueta</strong></th>
+                <th></th>
+                <th><strong>Invitado(s)</strong></th>
+            </tr>
+            <!-- Fila 2 -->
+            <tr>
+                <td rowspan="2" class="imagen"><img src="Trajes.png" alt="dress code"></td>
+                <td>Vestido largo</td>
+                <td></td>
+                <td rowspan="2" id="nombre-invitados">Nombre invitados</td>
+            </tr>
+            <tr>
+                <td>Traje formal</td>
+            </tr>
+            <!-- Fila 3 -->
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="cupos" class="cupos">Cupos ( )</td>
+            </tr>
+        </table>
+         
+        <div class="info-extra">
+            <p class="detalles">Lluvia de sobres</p>
+            <p class="nota">Queremos que disfruten al máximo este día especial, por lo que preferimos que sea un evento solo para adultos.</p>
+        </div>
+
+        <a href="https://forms.office.com/r/jYrKcB3L10" class="confirm-link">Confirmar Asistencia</a>
+    </div>
+
+    <script>
+        // Función para obtener parámetros de la URL
+        function getURLParameter(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+
+        // Obtener valores desde la URL
+        const nombre = getURLParameter('nombre'); // Ejemplo: ?nombre=Juan+Perez
+        const cupos = getURLParameter('cupos');   // Ejemplo: ?cupos=2
+
+        // Actualizar los valores en la tabla
+        if (nombre) {
+            document.getElementById('nombre-invitados').textContent = nombre;
+        }
+
+        if (cupos) {
+            document.getElementById('cupos').textContent = `Cupos (${cupos})`;
+        }
+    </script>
+</body>
+</html>
