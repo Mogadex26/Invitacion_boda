@@ -253,6 +253,17 @@ td[rowspan="2"] {
 
 .confirm-link{
     color: #f57c00;
-    margin-bottom: 120px;
+    margin-bottom: 15px;
     display: inline-block; /* o display: block */
+}
+
+#contador {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #d35400;
+    marrin-bottom: 150px;
+
+
 }
