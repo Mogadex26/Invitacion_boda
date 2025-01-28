@@ -15,6 +15,7 @@
 <body>
     <div class="invitacion">
         <header>
+
             <p class="versiculo">Ponme como un sello sobre tu corazón, como una marca sobre tu brazo;<br>
             porque fuerte como la muerte es el amor.<br> (Cantares 8:6a)</p>
         </header>
@@ -85,8 +86,8 @@
         }
 
         // Obtener valores desde la URL
-        const nombre = getURLParameter('nombre'); // Ejemplo: ?nombre=Juan+Perez
-        const cupos = getURLParameter('cupos');   // Ejemplo: ?cupos=2
+        const nombre = getURLParameter('n'); // Ejemplo: ?nombre=Juan+Perez
+        const cupos = getURLParameter('c');   // Ejemplo: ?cupos=2
 
         // Actualizar los valores en la tabla
         if (nombre) {
@@ -97,5 +98,9 @@
             document.getElementById('cupos').textContent = `Cupos (${cupos})`;
         }
     </script>
+
+      
 </body>
+
+
 </html>
