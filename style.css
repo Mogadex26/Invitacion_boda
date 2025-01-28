@@ -253,8 +253,7 @@ td[rowspan="2"] {
 
 .confirm-link{
     color: #f57c00;
-    margin-bottom: 15px;
-    display: inline-block; /* o display: block */
+    
 }
 
 #contador {
@@ -263,7 +262,7 @@ td[rowspan="2"] {
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
     color: #d35400;
-    marrin-bottom: 150px;
+    margin-bottom: 150px;
 
 
 }
