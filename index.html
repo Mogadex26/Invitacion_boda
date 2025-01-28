@@ -11,15 +11,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para el contador */
+        #contador {
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #d35400;
+        }
+    </style>
 </head>
 <body>
     <div class="invitacion">
         <header>
-
             <p class="versiculo">Ponme como un sello sobre tu corazón, como una marca sobre tu brazo;<br>
             porque fuerte como la muerte es el amor.<br> (Cantares 8:6a)</p>
         </header>
-        
+
         <h2>¡Nos casamos!</h2>
         <h1 class="nombres">
             <span class="nombre nombre-arriba">Laury</span>
@@ -35,14 +44,14 @@
             </span>
             <span class="año">2025</span>
         </p>
-        
+
         <div class="detalles">
             <p>Iglesia:<br>
             5:00 pm</p>
             <p>Salón de eventos:<br>
             8:00 pm</p>
         </div>
-            
+
         <table border="0">
             <!-- Fila 1: Encabezado -->
             <tr>
@@ -69,13 +78,16 @@
                 <td id="cupos" class="cupos">Cupos ( )</td>
             </tr>
         </table>
-         
+
         <div class="info-extra">
             <p class="detalles">Lluvia de sobres</p>
             <p class="nota">Queremos que disfruten al máximo este día especial, por lo que preferimos que sea un evento solo para adultos.</p>
         </div>
 
         <a href="https://forms.office.com/r/jYrKcB3L10" class="confirm-link">Confirmar Asistencia</a>
+
+        <!-- Contador debajo de Confirmación -->
+        <div id="contador">Cargando...</div>
     </div>
 
     <script>
@@ -97,10 +109,31 @@
         if (cupos) {
             document.getElementById('cupos').textContent = `Cupos (${cupos})`;
         }
+
+        // Configuración del contador
+        const fechaEvento = new Date("2025-06-28T17:00:00"); // Fecha del evento (28 junio 2025, 5:00 PM)
+
+        function actualizarContador() {
+            const ahora = new Date();
+            const tiempoFaltante = fechaEvento - ahora;
+
+            if (tiempoFaltante <= 0) {
+                document.getElementById("contador").innerHTML = "¡El evento ha comenzado!";
+                clearInterval(intervalo);
+                return;
+            }
+
+            const dias = Math.floor(tiempoFaltante / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((tiempoFaltante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((tiempoFaltante % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((tiempoFaltante % (1000 * 60)) / 1000);
+
+            document.getElementById("contador").innerHTML = 
+                `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+        }
+
+        // Actualizar cada segundo
+        const intervalo = setInterval(actualizarContador, 1000);
     </script>
-
-      
 </body>
-
-
 </html>
