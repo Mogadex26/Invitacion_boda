@@ -3,16 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Dancing Script', cursive;
     text-align: center;
     background-color: #fff;
-    color: #000;
+    color: #050438;
     padding: 20px;
     
 }
-
 .invitacion {
     max-width: 600px;
     margin: auto;
@@ -23,7 +21,6 @@ body {
  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .invitacion::before {
     content: '';
     position: absolute;
@@ -37,116 +34,124 @@ body {
     background-position: center; /* Centra la imagen dentro del contenedor */
     z-index: -1; /* Envía el fondo detrás del contenido */
 }
-
-
-
-
 header .versiculo {
     
-    font-size: 18px;
-    margin-top: 150px;
+    font-size: 20px;
+    margin-top: 140px;
     margin-bottom: 40px;
-    font-family: 'Dancing Script', cursive;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     line-height: 1;
 }
-
 h2 {
     font-size: 32px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-family: 'Dancing Script', cursive;
     position: relative; /* Contenedor relativo para posicionar hijos */
     text-align: center; /* Asegura que el ampersand quede centrado */
     line-height: 0.3; /* Controla el espacio vertical */
-    left: 50%; /* Centro horizontal de la pantalla */
+    left: 45%; /* Centro horizontal de la pantalla */
     transform: translate(-30%, 0); /* Desplaza un poco hacia la derecha */
+    color: #f57c00;
 }
-
 h1 {
-    font-size: 80px;
+    font-size: 85px;
     font-family: "Lavishly Yours", serif;
     font-weight: 400;
     font-style: normal;
 }
-
 h1 .nombre {
-    color: #000;
+    color: #050438;
 }
-
-
 h1 span {
     color: #f57c00;
 }
+
+
 
 .nombres {
     position: relative; /* Contenedor relativo para posicionar hijos */
     height: 150px; /* Altura suficiente para que quepan los nombres y el ampersand */
     text-align: center; /* Asegura que el ampersand quede centrado */
-    line-height: 0.3; /* Controla el espacio vertical */
+    line-height: 0.2; /* Controla el espacio vertical */
     margin-top: 1px;
     margin-bottom: 50px;
 }
-
 .nombre {
     position: absolute; /* Posicionamos los nombres de forma independiente */
-    font-size: 7rem;
+    font-size: 7.5rem;
     color: #000;
     transform: translateX(-50%); /* Ajusta al centro horizontal del contenedor */
 }
-
 .nombre-arriba {
     top: 0; /* Posición cerca del inicio del contenedor */
-    left: 50%; /* Centro horizontal de la pantalla */
+    left: 45%; /* Centro horizontal de la pantalla */
     transform: translate(-60%, 0); /* Desplaza un poco hacia la izquierda */
 }
-
 .nombre-abajo {
     bottom: 0; /* Posición cerca del final del contenedor */
-    left: 50%; /* Centro horizontal de la pantalla */
+    left: 45%; /* Centro horizontal de la pantalla */
     transform: translate(-40%, 0); /* Desplaza un poco hacia la derecha */
 }
-
 .ampersand {
     position: absolute;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #f57c00;
-    top: 50%; /* Centra verticalmente entre los nombres */
-    left: 50%; /* Centro horizontal del contenedor */
+    top: 48%; /* Centra verticalmente entre los nombres */
+    left: 45%; /* Centro horizontal del contenedor */
     transform: translate(-50%, -50%); /* Asegura que el ampersand esté justo al centro */
 }
-
 .mensaje {
     font-family: 'Great Vibes', cursive;
-    font-size: 25px;
+    font-size: 35px;
     line-height: 1; /* Controla el espacio vertical */
     margin-bottom: 20px;
 }
-
 .fecha {
     display: flex;
     justify-content: center; /* Centra todo horizontalmente */
     align-items: center; /* Alinea los elementos por su parte inferior */
     gap: 1rem; /* Espaciado entre los elementos */
-    margin: 1rem 0;
+    margin:-0.5rem 0;
 }
 
-.fecha .mes{
-    font-size: 1.5rem;
+.fecha .mes {
+    font-size: 2rem;
     color: #000;
     text-transform: capitalize;
     font-family: 'Great Vibes', cursive;
+    position: relative;
+    text-align: center;
 }
 
-
-
-
-
-
 .fecha .año {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #000;
     text-transform: capitalize;
     font-family: "Dancing Script", serif;
+    position: relative;
+    text-align: center;
+}
 
+/* Líneas decorativas en el mes y el año */
+.fecha .mes::before, .fecha .mes::after,
+.fecha .año::before, .fecha .año::after {
+    content: "";
+    position: absolute;
+    width: 90px; /* Longitud de la línea */
+    height: 1px; /* Grosor de la línea */
+    background-color: #d35400; /* Color de la línea */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fecha .mes::before, .fecha .año::before {
+    top: -5px; /* Línea superior */
+}
+
+.fecha .mes::after, .fecha .año::after {
+    bottom: -5px; /* Línea inferior */
 }
 
 .fecha .dia {
@@ -154,14 +159,14 @@ h1 span {
     display: flex;
     flex-direction: column; /* Coloca "Sábado" sobre el número */
     align-items: center; /* Centra "Sábado" y el número horizontalmente */
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     color: #f57c00;
 }
 
 .fecha .dia-semana {
     font-family: 'Great Vibes', cursive;
-    font-size: 1.2rem; /* Tamaño más pequeño para "Sábado" */
+    font-size: 1.5rem; /* Tamaño más pequeño para "Sábado" */
     color: #000; /* Texto en negro */
     font-weight: normal;
     margin-bottom: -0.5rem; /* Ajusta la separación entre "Sábado" y el número */
@@ -170,67 +175,62 @@ h1 span {
 
 
 table {
-    width: 80%; /* La tabla ocupa el 100% del contenedor */
+    width: 99%; /* La tabla ocupa el 90% del contenedor */
     border-collapse: collapse; /* Para que no haya espacio entre las celdas */
     margin: 20px auto; /* Centra la tabla horizontalmente */
-    table-layout: fixed; /* Esto asegura que las columnas respeten los anchos */
+    table-layout: fixed; /* Asegura que las columnas respeten los anchos */
+    font-family: 'Great Vibes', cursive;
+    color: #001F5B; /* Azul oscuro */
 }
-th{
-    padding: 1px;
-    text-align: center;
-    font-size: 1.5rem
-} 
 
-tr:nth-child(2), tr:nth-child(3){
-    padding: 1px;
+th {
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+}
+
+tr:nth-child(2){
+    font-size: 18px;
+}
+
+th:nth-child(1), td:nth-child(1),
+th:nth-child(2), td:nth-child(2) {
+    width: 50%;
+    text-align: center;
+    vertical-align: middle; /* Centra verticalmente */
+}
+
+.traje-formal {
+    display: flex; /* Alinea imagen y lista en la misma línea */
+    align-items: center; /* Asegura alineación vertical */
+    justify-content: center; /* Centra todo horizontalmente */
+    gap: 10px; /* Espaciado entre la imagen y el texto */
+}
+
+.traje-formal img {
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+}
+
+.traje-formal ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
     text-align: left;
 }
 
-th:nth-child(1), td:nth-child(1) {
-    width: 12%; 
-}
-
-th:nth-child(2), td:nth-child(2) {
-    width: 38%; 
-}
-
-th:nth-child(3), td:nth-child(3) {
-    width: 10%; 
-}
-th:nth-child(4), td:nth-child(4) {
-    width: 50%; 
-    text-align: center;
-    vertical-align: middle; /* Centra verticalmente */
-    
-}
-
-/* Asegura que la imagen se ajuste al ancho de la celda */
-td.imagen img {
-    width: 100%; /* Hace que la imagen ocupe todo el ancho de la celda */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
-
-/* Asegura que las celdas con rowspan no se desajusten */
-td[rowspan="2"] {
-    vertical-align: middle;
-}
 
 
 .detalles {
     font-family: 'Great Vibes', cursive;
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 20px;
+    color: #050438;
 }
-
-
 .info-extra {
-    font-size: 16px;
     margin-top: 20px;
-    line-height: 1.6;
-}
-
-.info-extra p {
-    margin-bottom: 10px;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
 /* Ajustes para móviles */
@@ -246,30 +246,79 @@ td[rowspan="2"] {
         margin-bottom: 15px;
     }
 }
-
 .nota{
     line-height: 1; 
+    font-size: 17px;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.Invita{
+    line-height: 1; 
+    font-size: 20px;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-style: bold;
 }
 
-.confirm-link{
+
+
+
+.confirm-link {
     color: #f57c00;
-    
+    font-size: 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Lavishly Yours", serif;
 }
 
-h3 {
-    font-size: 16px;
+.confirm-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.confirm-superior,
+.confirm-inferior {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.confirm-superior {
+    top: -8px; /* Ajusta la imagen superior */
+}
+
+.confirm-inferior {
+    bottom: -12px; /* Ajusta la imagen inferior */
+}
+
+.confirm-text {
+    display: block;
+    position: relative;
+    z-index: 1; /* Asegura que el texto quede sobre las imágenes */
+    padding: 5px 0; /* Ajusta el espaciado del texto */
+}
+
+.f {
+    font-size: 15px;
     margin-bottom: 2px;
     margin-top: 25px;
-    font-family: 'Dancing Script', cursive;
+    font-family: "Cinzel", serif;
 }
-
 #contador {
     margin-top: 2px;
     text-align: center;
-    font-family: 'Dancing Script', cursive;
+    font-family: "Cinzel", serif;
     font-size: 1.5rem;
     color: #d35400;
-    margin-bottom: 150px;
+    margin-bottom: 140px;
+}
 
+a {
+    text-decoration: none;
+}
 
+.logos{
+    margin-top: 10px;
 }
