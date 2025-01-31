@@ -186,7 +186,7 @@ table {
 th {
     font-size: 25px;
     text-align: center;
-    padding: 10px;
+    padding: -10px;
 }
 
 tr:nth-child(2){
