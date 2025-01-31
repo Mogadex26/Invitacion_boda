@@ -11,12 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
     
 </head>
 <body>
     <div class="invitacion">
         <header>
-            <p class="versiculo">Ponme como un sello sobre tu corazón, como una marca sobre tu brazo;<br>
+            <p class="versiculo">Ponme como un sello sobre tu corazón,<br>como una marca sobre tu brazo;<br>
             porque fuerte como la muerte es el amor.<br> (Cantares 8:6a)</p>
         </header>
 
@@ -37,47 +39,64 @@
         </p>
 
         <div class="detalles">
-            <p>Iglesia:<br>
-            5:00 pm</p>
-            <p>Salón de eventos:<br>
-            8:00 pm</p>
+            <img src="Iglesia.png" alt="Iglesia" width="50px" height="50px" >
+            <br>
+            <a href="https://maps.app.goo.gl/dvDNY2zSLUpwGBqj7" class="detalles">Santuario de la Bienaventurada Virgen María de las Gracias de Torcoroma</a>
+            <p>5:00 pm</p>
+            <img class="logos" src="Recepción.png" alt="Iglesia" width="50px" height="55px">
+            <br>
+            <a href="https://maps.app.goo.gl/gqEsp1f8PH5xcP5u9" class="detalles">Tv. 74 #31C-59, Los Alpes</a>
+            <p>8:00 pm</p>
         </div>
 
         <table border="0">
             <!-- Fila 1: Encabezado -->
             <tr>
-                <th></th>
-                <th><strong>Etiqueta</strong></th>
-                <th></th>
+                
+                <th><strong>Drees code</strong></th>
+                
                 <th><strong>Invitado(s)</strong></th>
             </tr>
             <!-- Fila 2 -->
             <tr>
-                <td rowspan="2" class="imagen"><img src="Trajes.png" alt="dress code"></td>
-                <td>Vestido largo</td>
-                <td></td>
-                <td rowspan="2" id="nombre-invitados">Nombre invitados</td>
+                
+                <td>
+                    <div class="traje-formal">
+                        <img src="Trajes.png" alt="Trajes">
+                        <ul>
+                            <li>Vestido largo</li>
+                            <li>Formal</li>
+                        </ul>
+                    </div>
+                    
+                </td>
+                
+                <td  id="nombre-invitados">Nombre invitados</td>
             </tr>
+                        <!-- Fila 3 -->
             <tr>
-                <td>Traje formal</td>
-            </tr>
-            <!-- Fila 3 -->
-            <tr>
+                
                 <td></td>
-                <td></td>
-                <td></td>
-                <td id="cupos" class="cupos">Cupos ( )</td>
+                
+                <td id="cupos" class="cupos"><strong>Cupos</strong> ( )</td>
             </tr>
         </table>
-
+        <p class="detalles">Lluvia de sobres</p>
         <div class="info-extra">
-            <p class="detalles">Lluvia de sobres</p>
-            <p class="nota">Queremos que disfruten al máximo este día especial, por lo que preferimos que sea un evento solo para adultos.</p>
+            <p class="nota">Los niños son tan lindos, pero a veces son más lindos dormidos, mientras los papás bailan toda la noche. </p>
+            <p class="Invita"><strong>¡Los esperamos en nuestra boda!</strong></p>
         </div>
 
-        <a href="https://forms.office.com/r/jYrKcB3L10" class="confirm-link">Confirmar Asistencia</a>
+        <a href="https://forms.office.com/r/jYrKcB3L10" class="confirm-link">
+            <div class="confirm-container">
+                
+                <span class="confirm-text">Confirmar Asistencia</span>
+                <img src="Inferior.png" class="confirm-inferior" width="340px">
+            </div>
+        </a>
+        
 
-        <h3>Faltan</h3>
+        <p class="f">Faltan</p>
 
         <!-- Contador debajo de Confirmación -->
         <div id="contador">Cargando...</div>
