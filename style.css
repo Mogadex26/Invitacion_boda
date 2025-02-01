@@ -38,7 +38,7 @@ header .versiculo {
     
     font-size: 25px;
     margin-top: 140px;
-    margin-bottom: 50px;
+    margin-bottom: 75px;
     font-optical-sizing: auto;
     line-height: 0.8;
     font-family: "Gwendolyn", serif;
@@ -86,7 +86,7 @@ h1 span {
     text-align: center; /* Asegura que el ampersand quede centrado */
     line-height: 0.2; /* Controla el espacio vertical */
     margin-top: 1px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 .nombre {
     position: absolute; /* Posicionamos los nombres de forma independiente */
@@ -114,7 +114,7 @@ h1 span {
 }
 .mensaje {
     font-family: 'Great Vibes', cursive;
-    font-size: 35px;
+    font-size: 29px;
     line-height: 1; /* Controla el espacio vertical */
     margin-bottom: 20px;
 }
