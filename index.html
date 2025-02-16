@@ -40,63 +40,71 @@
             </span>
             <span class="año">2025</span>
         </p>
-
-        <div class="detalles">
-            <!-- Iglesia -->
-            <img src="Iglesia.png" alt="Iglesia" width="50px" height="50px">
-            <br>
-            <p>
-                <a href="https://maps.app.goo.gl/dvDNY2zSLUpwGBqj7" target="_blank">
-                    <span class="pin"></span>
-                </a>
-                Santuario de la Bienaventurada Virgen María de las Gracias de Torcoroma
-            </p>
-            <p>5:00 pm</p>
+        <br>
         
-            <!-- Recepción -->
-            <img class="logos" src="Recepción.png" alt="Recepción" width="50px" height="55px">
+        <div class="informacion">
+            <div class="img">
+                <img src="Iglesia.png" alt="Iglesia" width="50px" height="50px">
+            </div>
+            <div class="Lugares">
+                <p>
+                    <a href="https://maps.app.goo.gl/dvDNY2zSLUpwGBqj7" target="_blank">
+                        <span class="pin"></span>
+                    </a>
+                    Santuario de la Bienaventurada Virgen María de las Gracias de Torcoroma
+                </p>
+            </div>
+            <div class="horas">
+                5:00 pm
+            </div>
             <br>
-            <p>
-                <a href="https://maps.app.goo.gl/gqEsp1f8PH5xcP5u9" target="_blank">
-                    <span class="pin"></span>
-                </a>
-                Salón de eventos, Los Alpes Tv. 74 #31C-59
-            </p>
-            <p>8:00 pm</p>
+            <div class="img">
+                <img class="logos" src="Recepción.png" alt="Recepción" width="50px" height="55px">
+            </div>
+            <div class="Lugares">
+                <p>
+                    <a href="https://maps.app.goo.gl/gqEsp1f8PH5xcP5u9" target="_blank">
+                        <span class="pin"></span>
+                    </a>
+                    Salón de eventos, Los Alpes Tv. 74 #31C-59
+                </p>
+            </div>
+            <div class="horas">
+                8:00 pm
+            </div>
+            <br>
+            <div class="subtitulo">
+                <strong>Dress code</strong>
+            </div>
+            <div class="etiqueta">
+                <div class="traje">
+                    <img src="Mujer.png" alt="mujer" width="66px" height="100px">
+                </div>
+                <div class="traje">
+                    <img src="Hombre.png" alt="hombre" width="66px" height="100px">
+                </div>
+                <div class="vestimenta"> Vestido largo <br> <span class="reservado"><strong>Color reservado:</strong></span> <span class="color"><img src="Color.png" alt="color" width="15px" height="15px"></span></div>
+                
+                <div class="vestimenta">Guayabera/Camisa y pantalón de vestir</div>
+
+            </div>
+            <br>
+            <div class="subtitulo">
+                <strong>Invitado(s)</strong>
+            </div>
+            <div class="invitados">
+                <p id="nombre-invitados">Familia Olascoaga Rodriguez</p>
+            </div>
+            <div class="cupos">
+               <p id="cupos" class="cupos"><strong>Cupos</strong> <span class="pare"><strong>(</strong></span>6<span class="pare"><strong>)</strong></span></p>
+            </div>
+            <br>
+            <div class="Lugares">
+                Lluvia de sobres
+            </div>
+         
         </div>
-        
-        
-
-        <table border="0">
-            <!-- Fila 1: Encabezado -->
-            <tr>
-                
-                <th><strong>Drees code</strong></th>
-                
-                <th><strong>Invitado(s)</strong></th>
-            </tr>
-            <!-- Fila 2 -->
-            <tr>
-                
-                <td>
-                    <div class="traje-formal">
-                        <img src="Trajes.png" alt="Trajes">
-                        <ul>
-                            <li>Vestido largo</li>
-                            <li>Formal</li>
-                        </ul>
-                    </div>
-                    
-                </td>
-                
-                <td id="invitados-y-cupos">
-                    <span id="nombre-invitados">Nombre invitados</span><br>
-                    <span id="cupos" class="cupos"><strong>Cupos</strong> ( )</span>
-                </td>
-            </tr>
-           
-        </table>
-        <p class="detalles">Lluvia de sobres</p>
+        <br>
         <div class="info-extra">
             <p class="nota">Los niños son tan lindos, pero a veces son más lindos dormidos, mientras los papás bailan toda la noche. </p>
             <p class="Invita"><strong>¡Los esperamos en nuestra boda!</strong></p>
@@ -114,7 +122,17 @@
         <p class="f">Faltan</p>
 
         <!-- Contador debajo de Confirmación -->
-        <div id="contador">Cargando...</div>
+        <div class="tiempo">
+            <div id="dias"></div>
+            <div id="horas"></div>
+            <div id="minutos"></div>
+            <div id="segundos"></div>
+            <div class="extra">días</div>
+            <div class="extra">horas</div>
+            <div class="extra">minutos</div>
+            <div class="extra">segundos</div>
+        </div>
+
     </div>
 
     <script>
@@ -149,14 +167,20 @@
                 clearInterval(intervalo);
                 return;
             }
-
+            
             const dias = Math.floor(tiempoFaltante / (1000 * 60 * 60 * 24));
             const horas = Math.floor((tiempoFaltante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutos = Math.floor((tiempoFaltante % (1000 * 60 * 60)) / (1000 * 60));
             const segundos = Math.floor((tiempoFaltante % (1000 * 60)) / 1000);
 
-            document.getElementById("contador").innerHTML = 
-                `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+            document.getElementById("dias").innerHTML = 
+            `${dias}`;
+            document.getElementById("horas").innerHTML = 
+            `${horas}`;
+            document.getElementById("minutos").innerHTML = 
+            `${minutos}`;
+            document.getElementById("segundos").innerHTML = 
+            `${segundos}`;
         }
 
         // Actualizar cada segundo
