@@ -96,7 +96,9 @@
                 <p id="nombre-invitados">Nombre invitados</p>
             </div>
             <div class="cupos">
-               <p id="cupos" class="cupos"><strong>Cupos</strong> <span class="pare"><strong>(</strong></span> <span class="pare"><strong>)</strong></span></p>
+                <span><strong>Cupos</strong> <span class="pare"><strong>(</strong></span>
+               <span><p id="cupos" class="cupos"> </p>
+               </span> <span class="pare"><strong>)</strong></span>
             </div>
             <br>
             <div class="Lugares">
@@ -152,7 +154,7 @@
         }
 
         if (cupos) {
-            document.getElementById('cupos').textContent = `Cos (${cupos})`;
+            document.getElementById('cupos').textContent = `${cupos}`;
         }
 
         // Configuración del contador
