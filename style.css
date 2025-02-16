@@ -70,6 +70,7 @@ header .versiculo {
 h1 {
     font-size: 85px;
     font-family: "Lavishly Yours", serif;
+    
     font-weight: 400;
     font-style: normal;
 }
@@ -91,7 +92,7 @@ h1 span {
 .nombre {
     position: absolute; /* Posicionamos los nombres de forma independiente */
     font-size: 7.5rem;
-    color: #000;
+    color:#050438;
     transform: translateX(-50%); /* Ajusta al centro horizontal del contenedor */
 }
 .nombre-arriba {
@@ -114,7 +115,7 @@ h1 span {
 }
 .mensaje {
     font-family: 'Great Vibes', cursive;
-    font-size: 29px;
+    font-size: 28px;
     line-height: 1; /* Controla el espacio vertical */
     margin-bottom: 20px;
 }
@@ -128,7 +129,7 @@ h1 span {
 
 .fecha .mes {
     font-size: 2rem;
-    color: #000;
+    color: #050438;
     text-transform: capitalize;
     font-family: 'Great Vibes', cursive;
     position: relative;
@@ -137,7 +138,7 @@ h1 span {
 
 .fecha .año {
     font-size: 2rem;
-    color: #000;
+    color: #050438;
     text-transform: capitalize;
     font-family: "Dancing Script", serif;
     position: relative;
@@ -177,65 +178,9 @@ h1 span {
 .fecha .dia-semana {
     font-family: 'Great Vibes', cursive;
     font-size: 1.5rem; /* Tamaño más pequeño para "Sábado" */
-    color: #000; /* Texto en negro */
+    color: #050438; /* Texto en negro */
     font-weight: normal;
     margin-bottom: -0.5rem; /* Ajusta la separación entre "Sábado" y el número */
-}
-
-
-
-table {
-    width: 99%; /* La tabla ocupa el 90% del contenedor */
-    border-collapse: collapse; /* Para que no haya espacio entre las celdas */
-    margin: 20px auto; /* Centra la tabla horizontalmente */
-    table-layout: fixed; /* Asegura que las columnas respeten los anchos */
-    font-family: 'Great Vibes', cursive;
-    color: #001F5B; /* Azul oscuro */
-}
-
-th {
-    font-size: 25px;
-    text-align: center;
-    padding: -10px;
-}
-
-tr:nth-child(2){
-    font-size: 18px;
-}
-
-th:nth-child(1), td:nth-child(1),
-th:nth-child(2), td:nth-child(2) {
-    width: 50%;
-    text-align: center;
-    vertical-align: middle; /* Centra verticalmente */
-}
-
-.traje-formal {
-    display: flex; /* Alinea imagen y lista en la misma línea */
-    align-items: center; /* Asegura alineación vertical */
-    justify-content: center; /* Centra todo horizontalmente */
-    gap: 10px; /* Espaciado entre la imagen y el texto */
-}
-
-.traje-formal img {
-    width: 50px; /* Ajusta el tamaño de la imagen */
-    height: auto;
-}
-
-.traje-formal ul {
-    list-style-type: none; /* Quita los puntos de la lista */
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-
-
-
-.detalles {
-    font-family: 'Great Vibes', cursive;
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: #050438;
 }
 
 .pin {
@@ -266,6 +211,11 @@ th:nth-child(2), td:nth-child(2) {
     transform: translate(-50%, -50%);
 }
 
+.color{
+    position: absolute; 
+    transform: translate(12%, 2%);
+}
+
 /* Animación de rebote */
 @keyframes bounce {
     0% { transform: translateY(1px) rotate(-45deg); }
@@ -286,25 +236,14 @@ th:nth-child(2), td:nth-child(2) {
     margin-bottom: 30px;
 }
 
-/* Ajustes para móviles */
-@media (max-width: 768px) {
-    .tabla-info {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .columna {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-}
 .nota{
     line-height: 1; 
     font-size: 14px;
     font-family: "Cinzel", serif;
     font-optical-sizing: auto;
     font-style: normal;
+
 }
 .Invita{
     line-height: 1; 
@@ -312,10 +251,8 @@ th:nth-child(2), td:nth-child(2) {
     font-family: "Cinzel", serif;
     font-optical-sizing: auto;
     font-style: bold;
+    
 }
-
-
-
 
 .confirm-link {
     color: #f57c00;
@@ -330,23 +267,10 @@ th:nth-child(2), td:nth-child(2) {
     display: inline-block;
     text-align: center;
     line-height: 0.8; /* Controla el espacio vertical */
+    
 
 }
 
-.confirm-superior,
-.confirm-inferior {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.confirm-superior {
-    top: -8px; /* Ajusta la imagen superior */
-}
-
-.confirm-inferior {
-    bottom: -12px; /* Ajusta la imagen inferior */
-}
 
 .confirm-text {
     display: block;
@@ -361,14 +285,7 @@ th:nth-child(2), td:nth-child(2) {
     margin-top: 25px;
     font-family: "Cinzel", serif;
 }
-#contador {
-    margin-top: 2px;
-    text-align: center;
-    font-family: "Dancing Script", serif;
-    font-size: 1.5rem;
-    color: #d35400;
-    margin-bottom: 140px;
-}
+
 
 a {
     text-decoration: none;
@@ -376,4 +293,75 @@ a {
 
 .logos{
     margin-top: 10px;
+}
+
+.informacion{
+    display: grid;
+    gap: 2px;
+    
+}
+
+.Lugares {
+    font-family: 'Great Vibes', cursive;
+    font-size: 22px;
+    color: #050438;
+}
+.horas {
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+    color: #050438;
+}
+.subtitulo{
+    font-family: "Cinzel", serif;
+
+}
+
+.etiqueta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: auto auto; /* Tres filas: las dos primeras con altura automática y la última ocupando todo el espacio disponible */
+    gap: 15px; /* Opcional, para separación entre elementos */
+    row-gap: 0.1px;
+    width: 80%;
+    margin: 0px auto;
+
+}
+
+
+
+
+.tiempo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Dos columnas */
+    grid-template-rows: auto auto; /* Tres filas: las dos primeras con altura automática y la última ocupando todo el espacio disponible */
+    row-gap: -5px; /* Opcional, para separación entre elementos */
+    width: 90%;
+    margin: 0px auto;
+    text-align: center;
+    font-family: "Dancing Script", serif;
+    font-size: 1.5rem;
+    color: #d35400;
+    margin-bottom: 160px;
+
+}
+
+.extra{
+    font-size: 1.0rem;
+}
+
+.vestimenta{
+    /*
+    font-family: 'Great Vibes', cursive;
+   font-family: "Gwendolyn", serif;font-family: 'Dancing Script', cursive;
+    
+    */
+font-family: "Cinzel", serif;
+font-size: 12px;
+}
+.pare, .reservado{
+    color: #d35400;
+}
+
+.invitados{
+    font-size: 22px;
 }
