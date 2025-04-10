@@ -8,7 +8,7 @@ body {
     text-align: center;
     background-color: #fff;
     color: #050438;
-    padding: 20px;
+    padding: 2px;
     
 }
 .invitacion {
@@ -36,7 +36,7 @@ body {
 }
 header .versiculo {
     
-    font-size: 25px;
+    font-size: 1.5rem;
     margin-top: 180px;
     margin-bottom: 75px;
     font-optical-sizing: auto;
@@ -48,7 +48,7 @@ header .versiculo {
     
 }
 .adorno {
-    font-size: 32px;
+    font-size: 40px;
    
     font-family: 'Dancing Script', cursive;
     position: absolute; /* Cambiado a absolute para que se posicione correctamente con left */
@@ -256,7 +256,7 @@ h1 span {
 
 .confirm-link {
     color: #f57c00;
-    font-size: 40px;
+    font-size: 42px;
     text-decoration: none;
     display: inline-block;
     font-family: "Lavishly Yours", serif;
@@ -279,12 +279,7 @@ h1 span {
     padding: 5px 0; /* Ajusta el espaciado del texto */
 }
 
-.f {
-    font-size: 15px;
-    margin-bottom: 2px;
-    margin-top: 25px;
-    font-family: "Cinzel", serif;
-}
+
 
 
 a {
@@ -303,21 +298,22 @@ a {
 
 .Lugares {
     font-family: 'Great Vibes', cursive;
-    font-size: 28px;
+    font-size: 1.5rem;
     color: #050438;
     cursor: pointer;
 }
 
 .direc{
-    font-size: 24px;
+    font-size: 1.2rem;
 }
 .horas {
     font-family: 'Great Vibes', cursive;
-    font-size: 35px;
+    font-size: 2rem;
     color: #050438;
 }
 .subtitulo{
     font-family: "Cinzel", serif;
+    font-size: 1.5rem;
 
 }
 
@@ -333,15 +329,12 @@ a {
 }
 
 
-
-
 .tiempo {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Dos columnas */
-    grid-template-rows: auto auto; /* Tres filas: las dos primeras con altura automática y la última ocupando todo el espacio disponible */
-    row-gap: -5px; /* Opcional, para separación entre elementos */
-    width: 85%;
-    margin: 0px auto;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    row-gap: 0px;
+    width: 100%;
+    margin: 0 auto;
     text-align: center;
     font-family: "Dancing Script", serif;
     font-size: 2rem;
@@ -350,8 +343,10 @@ a {
 
 }
 
+ 
+
 .extra{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .vestimenta{
@@ -361,14 +356,14 @@ a {
     
     */
 font-family: "Cinzel", serif;
-font-size: 14px;
+font-size: 0.8rem;
 }
 .pare, .reservado{
     color: #d35400;
 }
 
 .invitados, .cupos{
-    font-size: 27px;
+    font-size: 1.2rem;
 }
 
 
@@ -380,7 +375,7 @@ font-size: 14px;
 
 
     .mensaje {
-        font-size: 20px;
+        font-size: 1.6rem;
     }
 
     .fecha .dia {
@@ -388,7 +383,7 @@ font-size: 14px;
     }
 
     .fecha .dia-semana {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .fecha .mes,
@@ -396,9 +391,17 @@ font-size: 14px;
         font-size: 1.5rem;
     }
 
-    .Lugares,
+    .Lugares
+    {
+        font-size: 1.5rem;
+    }
+    .Lluvia
+    {
+        font-size: 2rem;
+        font-family: 'Great Vibes', cursive;
+    }
     .horas {
-        font-size: 24px;
+        font-size: 2rem;
     }
 
     .direc {
@@ -408,7 +411,7 @@ font-size: 14px;
     .tiempo {
         grid-template-columns: repeat(4, 1fr);
         font-size: 1.2rem;
-        gap: 10px;
+        gap: 0px;
     }
 
     .etiqueta {
@@ -421,6 +424,4 @@ font-size: 14px;
         top: -10%;
     }
 }
-
-
 
