@@ -340,7 +340,7 @@ a {
     grid-template-columns: repeat(4, 1fr); /* Dos columnas */
     grid-template-rows: auto auto; /* Tres filas: las dos primeras con altura automática y la última ocupando todo el espacio disponible */
     row-gap: -5px; /* Opcional, para separación entre elementos */
-    width: 70%;
+    width: 85%;
     margin: 0px auto;
     text-align: center;
     font-family: "Dancing Script", serif;
