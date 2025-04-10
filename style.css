@@ -37,7 +37,7 @@ body {
 header .versiculo {
     
     font-size: 25px;
-    margin-top: 140px;
+    margin-top: 180px;
     margin-bottom: 75px;
     font-optical-sizing: auto;
     line-height: 0.8;
@@ -303,12 +303,17 @@ a {
 
 .Lugares {
     font-family: 'Great Vibes', cursive;
-    font-size: 22px;
+    font-size: 28px;
     color: #050438;
+    cursor: pointer;
+}
+
+.direc{
+    font-size: 24px;
 }
 .horas {
     font-family: 'Great Vibes', cursive;
-    font-size: 20px;
+    font-size: 35px;
     color: #050438;
 }
 .subtitulo{
@@ -335,18 +340,18 @@ a {
     grid-template-columns: repeat(4, 1fr); /* Dos columnas */
     grid-template-rows: auto auto; /* Tres filas: las dos primeras con altura automática y la última ocupando todo el espacio disponible */
     row-gap: -5px; /* Opcional, para separación entre elementos */
-    width: 90%;
+    width: 70%;
     margin: 0px auto;
     text-align: center;
     font-family: "Dancing Script", serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #d35400;
-    margin-bottom: 160px;
+    margin-bottom: 220px;
 
 }
 
 .extra{
-    font-size: 1.0rem;
+    font-size: 1.5rem;
 }
 
 .vestimenta{
@@ -356,12 +361,13 @@ a {
     
     */
 font-family: "Cinzel", serif;
-font-size: 12px;
+font-size: 14px;
 }
 .pare, .reservado{
     color: #d35400;
 }
 
-.invitados{
-    font-size: 22px;
+.invitados, .cupos{
+    font-size: 27px;
 }
+
