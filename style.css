@@ -371,3 +371,56 @@ font-size: 14px;
     font-size: 27px;
 }
 
+
+@media (max-width: 600px) {
+    .invitacion {
+        padding: 10px;
+        margin: 10px;
+    }
+
+
+    .mensaje {
+        font-size: 20px;
+    }
+
+    .fecha .dia {
+        font-size: 2.5rem;
+    }
+
+    .fecha .dia-semana {
+        font-size: 1rem;
+    }
+
+    .fecha .mes,
+    .fecha .año {
+        font-size: 1.5rem;
+    }
+
+    .Lugares,
+    .horas {
+        font-size: 24px;
+    }
+
+    .direc {
+        font-size: 18px;
+    }
+
+    .tiempo {
+        grid-template-columns: repeat(4, 1fr);
+        font-size: 1.2rem;
+        gap: 10px;
+    }
+
+    .etiqueta {
+        grid-template-columns: repeat(2,1fr);
+        font-size: 1rem;
+    }
+
+    .adorno {
+        font-size: 24px;
+        top: -10%;
+    }
+}
+
+
+
