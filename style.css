@@ -343,6 +343,11 @@ a {
 
 }
 
+.Lluvia
+{
+    font-size: 2rem;
+    font-family: 'Great Vibes', cursive;}
+
  
 
 .extra{
@@ -358,7 +363,7 @@ a {
 font-family: "Cinzel", serif;
 font-size: 0.8rem;
 }
-.pare, .reservado{
+.pare{
     color: #d35400;
 }
 
